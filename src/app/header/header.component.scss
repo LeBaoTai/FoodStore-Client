@@ -1,0 +1,41 @@
+.wrapper {
+  width: 100%;
+  height: 75px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-color);
+  font-family: "Inter", sans-serif;
+
+  .search-box {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    height: 40px;
+
+    .search-input {
+      height: auto;
+      width: 850px;
+      border-radius: 10px;
+      font-size: 14px;
+      border: none;
+    }
+    .search-input:focus {
+      outline: none;
+    }
+
+    .btn {
+      height: 100%;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      background-color: var(--bg-color);
+      border-radius: 0 10px 10px 0;
+      border-left: 1px solid var(--border-color);
+      transition: ease-in 0.1s;
+      color: rgb(10, 104, 255);
+
+      &:hover {
+        background-color: lightblue;
+      }
+    }
+  }
+}
