@@ -6,36 +6,90 @@
   border-bottom: 1px solid var(--border-color);
   font-family: "Inter", sans-serif;
 
+  a {
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  img {
+    height: 75px;
+  }
+
   .search-box {
     border: 1px solid var(--border-color);
     border-radius: 10px;
     height: 40px;
 
+    .search-prefix {
+      padding: 10px;
+    }
+
     .search-input {
-      height: auto;
-      width: 850px;
+      height: 28px;
+      width: 800px;
       border-radius: 10px;
       font-size: 14px;
       border: none;
-    }
-    .search-input:focus {
-      outline: none;
+
+      &:focus {
+        outline: none;
+      }
     }
 
     .btn {
       height: 100%;
       background: transparent;
       border: none;
-      cursor: pointer;
       background-color: var(--bg-color);
       border-radius: 0 10px 10px 0;
       border-left: 1px solid var(--border-color);
       transition: ease-in 0.1s;
       color: rgb(10, 104, 255);
+      font-weight: 500;
 
       &:hover {
         background-color: lightblue;
+        cursor: pointer;
       }
+    }
+  }
+
+  .home-box {
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: rgb(10, 104, 255);
+
+    &:hover {
+      cursor: pointer;
+      background-color: lightblue;
+    }
+  }
+
+  .account-box {
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: rgb(128, 128, 137);
+
+    &:hover {
+      cursor: pointer;
+      background-color: #efefef;
+    }
+  }
+
+  .cart-box {
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: rgb(10, 104, 255);
+
+    &:hover {
+      cursor: pointer;
+      background-color: #efefef;
     }
   }
 }
