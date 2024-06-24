@@ -1,0 +1,15 @@
+.wrapper {
+  padding: 15px;
+  box-sizing: border-box;
+
+  .side-bar {
+    width: 15%;
+    padding: 10px;
+  }
+
+  .body {
+    width: 85%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
