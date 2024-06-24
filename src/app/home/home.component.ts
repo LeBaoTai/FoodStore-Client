@@ -17,31 +17,37 @@ export class HomeComponent {
     {
       image: 'assets/category/vegetables.png',
       title: 'Vegetables',
+      url: '/vegetables',
     },
 
     {
       image: 'assets/category/beef.png',
       title: 'Beef',
+      url: '/beef',
     },
 
     {
       image: 'assets/category/chicken.png',
       title: 'Chicken',
+      url: '/chicken',
     },
 
     {
       image: 'assets/category/crab.png',
       title: 'Crab',
+      url: '/crab',
     },
 
     {
       image: 'assets/category/fish.png',
       title: 'Fish',
+      url: '/fish',
     },
 
     {
       image: 'assets/category/pork.png',
       title: 'Pork',
+      url: '/pork',
     },
   ];
 }
