@@ -1,13 +1,16 @@
 .wrapper {
   padding: 15px;
   box-sizing: border-box;
+  width: 100%;
 
   .side-bar {
     width: 15%;
     padding: 10px;
+    box-sizing: border-box;
   }
 
   .body {
+    flex-grow: 1;
     width: 85%;
     padding: 10px;
     box-sizing: border-box;

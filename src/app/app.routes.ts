@@ -9,12 +9,34 @@ import { HistoryComponent } from './component/account/history/history.component'
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, title: 'Food Store' },
-  { path: 'account', component: AccountComponent, title: 'My Account' },
-  { path: 'cart', component: CartComponent, title: 'Cart'},
+  { path: 'cart', component: CartComponent, title: 'Cart' },
 
   // account path
-  { path: 'account/info', component: InfoComponent, title: 'My Information' },
-  { path: 'account/my-products', component: MyProductsComponent, title: 'My Products' },
-  { path: 'account/manager-orders', component: ManageOrdersComponent, title: 'Orders' },
-  { path: 'account/history', component: HistoryComponent, title: 'History' },
+  {
+    path: 'account',
+    component: AccountComponent,
+    title: 'My Account',
+    children: [
+      {
+        path: 'infor',
+        component: InfoComponent,
+        title: 'My Information',
+      },
+      {
+        path: 'my-products',
+        component: MyProductsComponent,
+        title: 'My Products',
+      },
+      {
+        path: 'manage-orders',
+        component: ManageOrdersComponent,
+        title: 'Orders',
+      },
+      {
+        path: 'history',
+        component: HistoryComponent,
+        title: 'History',
+      },
+    ],
+  },
 ];
