@@ -3,24 +3,8 @@
     <app-side-bar [tiles]="foodTiles" [title]="foodTitle"></app-side-bar>
   </div>
   <div class="product flex wrap justify-start gap-1">
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
+    @for (product of products; track $index) {
+      <app-product [product]="product"></app-product>
+    }
   </div>
 </div>

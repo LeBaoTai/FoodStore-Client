@@ -1,0 +1,32 @@
+.wrapper {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+
+  .info {
+    padding-right: 20px;
+    width: 60%;
+
+    .info-header {
+      .avatar {
+        width: 25%;
+      }
+
+      .input-title {
+        width: 35%;
+      }
+
+      .input {
+        width: 40%;
+      }
+    }
+  }
+
+  .contact {
+    padding-left: 20px;
+    border-left: 1px solid var(--border-color);
+    width: 40%;
+  }
+}

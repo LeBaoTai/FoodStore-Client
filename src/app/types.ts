@@ -6,6 +6,7 @@ export interface Tile {
 
 export interface Product {
   image: string;
-  title: string;
-  price: string;
+  name: string;
+  price: number;
+  type: string;
 }
