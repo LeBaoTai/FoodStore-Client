@@ -45,7 +45,7 @@
   </a>
 
   <!-- account -->
-  <a href="/account">
+  <div class="hover-popup">
     <div class="account-box row">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,19 @@
 
       <p>Account</p>
     </div>
-  </a>
+
+    <div class="popup column" style="">
+      <a routerLink="account/infor">
+        <div class="title">My Information</div>
+      </a>
+      <a href="account/manage-orders">
+        <div class="title">My orders</div>
+      </a>
+      <a href="">
+        <div class="title"><p>Logout</p></div>
+      </a>
+    </div>
+  </div>
 
   <!-- cart -->
   <a href="/cart">

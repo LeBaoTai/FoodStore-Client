@@ -1,13 +1,16 @@
 .wrapper {
   padding: 15px;
   box-sizing: border-box;
+  flex-grow: 1;
 
   .side-bar {
     width: 15%;
     padding: 10px;
+    box-sizing: border-box;
   }
 
   .product {
+    flex-grow: 1;
     width: 85%;
     padding: 10px;
     box-sizing: border-box;

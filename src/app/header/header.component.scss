@@ -5,6 +5,7 @@
   box-sizing: border-box;
   border-bottom: 1px solid var(--border-color);
   font-family: "Inter", sans-serif;
+  position: relative;
 
   a {
     text-decoration: none;
@@ -67,17 +68,55 @@
     }
   }
 
-  .account-box {
+  .hover-popup {
+    position: relative; /* Make this the containing block for the popup */
     height: 40px;
     padding: 10px;
     box-sizing: border-box;
     border-radius: 10px;
     color: rgb(128, 128, 137);
+    display: flex;
+
+    .account-box {
+      align-items: center;
+    }
+
+    .popup {
+      display: none; /* Initially hide the popup */
+      position: absolute;
+      top: 100%;
+      right: 0;
+      font-size: 14px;
+      font-family: Inter, sans-serif;
+      background: var(--bg-color);
+      padding: 5px;
+      width: 150px;
+      border-radius: 10px;
+      z-index: 1;
+
+      .title {
+        padding: 5px;
+        border-radius: 10px;
+
+        line-height: 20px;
+        &:hover {
+          background-color: #efefef;
+        }
+      }
+
+      a {
+        color: rgb(30, 30, 30);
+      }
+    }
 
     &:hover {
       cursor: pointer;
       background-color: #efefef;
     }
+  }
+
+  .hover-popup:hover .popup {
+    display: block;
   }
 
   .cart-box {

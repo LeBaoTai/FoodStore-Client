@@ -17,7 +17,7 @@ export class AccountComponent {
     {
       image: 'assets/account/user.png',
       title: 'My Infomation',
-      url: '/account/info',
+      url: '/account/infor',
     },
 
     {
@@ -29,7 +29,7 @@ export class AccountComponent {
     {
       image: 'assets/account/order.png',
       title: 'Manage Orders',
-      url: '/manage-orders',
+      url: '/account/manage-orders',
     },
 
     {
