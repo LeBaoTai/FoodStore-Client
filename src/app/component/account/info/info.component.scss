@@ -5,28 +5,153 @@
   background-color: var(--bg-color);
   border-radius: 10px;
 
-  .info {
+  font-family: "Inter", sans-serif;
+
+  .title {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .info-right {
+    box-sizing: border-box;
     padding-right: 20px;
     width: 60%;
 
     .info-header {
       .avatar {
+        padding: 5px;
         width: 25%;
+        img {
+          width: 100%;
+        }
       }
 
       .input-title {
+        padding: 5px;
         width: 35%;
       }
 
       .input {
+        padding: 5px;
+        box-sizing: border-box;
         width: 40%;
+        input {
+          padding-left: 10px;
+          border-radius: 5px;
+          line-height: 35px;
+          border: 1px solid var(--border-color);
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .info-body {
+      width: 100%;
+      .body-title {
+        width: 30%;
+      }
+
+      .body-value {
+        width: 70%;
+
+        select {
+          padding: 5px;
+          width: 100px;
+          height: 35px;
+          border: 1px solid var(--border-color);
+          border-radius: 5px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+
+    .info-update-button {
+      padding: 20px;
+      width: 100%;
+
+      .button {
+        height: 50px;
+        width: 200px;
+        border-radius: 5px;
+        border: none;
+
+        background-color: rgb(10, 104, 255);
+        color: var(--fg-color);
+
+        transition: all ease 0.2s 0s;
+
+        &:hover {
+          background-color: rgb(50, 140, 255);
+          cursor: pointer;
+        }
       }
     }
   }
 
-  .contact {
+  .info-left {
     padding-left: 20px;
     border-left: 1px solid var(--border-color);
     width: 40%;
+
+    .contact {
+      width: 100%;
+      box-sizing: border-box;
+
+      .icon {
+        width: 15px;
+        height: 15px;
+      }
+
+      .button {
+        width: 80px;
+        height: 25px;
+        border-radius: 5px;
+        border: 1px solid rgb(10, 104, 255);
+        color: rgb(10, 104, 255);
+        background-color: var(--bg-color);
+
+        transition: all ease 0.2s 0s;
+
+        &:hover {
+          color: var(--fg-color);
+          background-color: rgb(50, 140, 255);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .security {
+      width: 100%;
+      box-sizing: border-box;
+
+      .icon {
+        width: 15px;
+        height: 15px;
+      }
+
+      .button {
+        width: 80px;
+        height: 25px;
+        border-radius: 5px;
+        border: 1px solid rgb(10, 104, 255);
+        color: rgb(10, 104, 255);
+        background-color: var(--bg-color);
+
+        transition: all ease 0.2s 0s;
+
+        &:hover {
+          color: var(--fg-color);
+          background-color: rgb(50, 140, 255);
+          cursor: pointer;
+        }
+      }
+    }
   }
 }

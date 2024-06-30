@@ -1,29 +1,34 @@
 <div class="wrapper row">
-  <div class="info">
+  <!-- information session -->
+  <div class="info-right">
     <div class="info-title title">Information</div>
 
     <div class="info-header row">
-      <div class="avatar"></div>
-      <div class="input-title column">
+      <div class="avatar"><img src="assets/product/salad.jpg" alt="" /></div>
+
+      <div class="input-title column space-evenly">
         <div class="firstname">Firstname</div>
         <div class="lastname">Lastname</div>
       </div>
-      <div class="input column">
-        <input type="text" class="input-firstname" />
-        <input type="text" class="input-lastname" />
+
+      <div class="input column space-evenly">
+        <input type="text" class="input-firstname" value="" />
+        <input type="text" class="input-lastname" value="" />
       </div>
     </div>
 
+    <br />
+
     <div class="info-body row">
-      <div class="body-title column">
+      <div class="body-title column gap-2">
         <span>Date of birth</span>
         <span>Gender</span>
       </div>
 
-      <div class="body-value">
-        <div class="dob">
+      <div class="body-value column gap-2">
+        <div class="dob space-evenly flex">
           <select name="day">
-            <option value="0">Ngày</option>
+            <option value="0">Day</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -57,7 +62,7 @@
             <option value="31">31</option>
           </select>
           <select name="month">
-            <option value="0">Tháng</option>
+            <option value="0">Month</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -72,7 +77,7 @@
             <option value="12">12</option>
           </select>
           <select name="year">
-            <option value="0">Năm</option>
+            <option value="0">Year</option>
             <option value="2024">2024</option>
             <option value="2023">2023</option>
             <option value="2022">2022</option>
@@ -201,56 +206,99 @@
           </select>
         </div>
 
-        <div class="gender">
-          <input type="radio" name="gender" value="male" />
-          <span>Male</span>
+        <div class="gender flex gap-2">
+          <div class="">
+            <input type="radio" name="gender" value="male" />
+            <span>Male</span>
+          </div>
 
-          <input type="radio" name="gender" value="female" />
-          <span>Female</span>
+          <div class="">
+            <input type="radio" name="gender" value="female" />
+            <span>Female</span>
+          </div>
 
-          <input type="radio" name="gender" value="other" />
-          <span>Other</span>
+          <div class="">
+            <input type="radio" name="gender" value="other" />
+            <span>Other</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="info-update-button">
-      <button type="button">Update</button>
+    <div class="info-update-button flex justify-center">
+      <button type="button" class="button">Update</button>
     </div>
   </div>
-  <div class="contact">
-    <div class="contact-title title">Phone Number & Email</div>
-    <div class="contact-body">
-      <div class="phone row">
-        <div class="icon">icon</div>
-        <div class="phone-number column">
-          <div class="phone-title">Phone number</div>
-          <div class="phone-number">0123456789</div>
+
+  <!-- left session -->
+  <div class="info-left column gap-2">
+    <div class="contact">
+      <div class="contact-title title">Phone Number & Email</div>
+
+      <div class="phone-email column gap-05">
+        <div class="phone row space-between">
+          <div class="row gap-05">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
+                />
+              </svg>
+            </div>
+
+            <div class="phone-number column gap-02">
+              <div class="phone-title">Phone number</div>
+              <div class="phone-number">0123456789</div>
+            </div>
+          </div>
+
+          <div class="phone-update-button">
+            <button type="button" class="button">Update</button>
+          </div>
         </div>
 
-        <div class="phone-update-button">
-          <button type="button">Update</button>
+        <div class="email row space-between">
+          <div class="row gap-05">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
+                />
+              </svg>
+            </div>
+
+            <div class="email-info column gap-02">
+              <div class="email-title">Email</div>
+              <div class="email-address">fnight644&#64;gmail.com</div>
+            </div>
+          </div>
+
+          <div class="phone-update-button">
+            <button type="button" class="button">Update</button>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="email row">
-        <div class="icon">icon</div>
-        <div class="email-info column">
-          <div class="email-title">Phone number</div>
-          <div class="email-address">0123456789</div>
-        </div>
-        <div class="phone-update-button">
-          <button type="button">Update</button>
-        </div>
-      </div>
-
+    <div class="security">
       <div class="security-title title">Security</div>
 
-      <div class="password row">
-        <div class="icon">icon</div>
-        <div class="password">Change password</div>
+      <div class="password row space-between">
+        <div class="row gap-05">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"
+              />
+            </svg>
+          </div>
+          <div class="password">Change password</div>
+        </div>
+
         <div class="password-update-button">
-          <button type="button">Update</button>
+          <button type="button" class="button">Update</button>
         </div>
       </div>
     </div>
