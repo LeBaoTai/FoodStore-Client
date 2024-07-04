@@ -22,6 +22,11 @@ export class HomeComponent {
   foodTitle: string = 'Category';
   foodTiles: Tile[] = [
     {
+      image: 'assets/category/select-all.png',
+      title: 'All',
+      url: '',
+    },
+    {
       image: 'assets/category/vegetables.png',
       title: 'Vegetables',
       url: '/vegetables',
