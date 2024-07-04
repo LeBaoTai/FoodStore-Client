@@ -5,8 +5,12 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './manage-orders.component.html',
-  styleUrl: './manage-orders.component.scss'
+  styleUrl: './manage-orders.component.scss',
 })
 export class ManageOrdersComponent {
+  activeTab: string = 'All';
 
+  setActiveTab(tab: string) {
+    this.activeTab = tab;
+  }
 }
