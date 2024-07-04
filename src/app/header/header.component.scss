@@ -69,7 +69,7 @@
   }
 
   .hover-popup {
-    position: relative; /* Make this the containing block for the popup */
+    position: relative;
     height: 40px;
     padding: 10px;
     box-sizing: border-box;
@@ -82,7 +82,7 @@
     }
 
     .popup {
-      display: none; /* Initially hide the popup */
+      display: none;
       position: absolute;
       top: 100%;
       right: 0;

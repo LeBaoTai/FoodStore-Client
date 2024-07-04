@@ -32,11 +32,11 @@ export class AccountComponent {
       url: '/account/manage-orders',
     },
 
-    {
-      image: 'assets/account/history.png',
-      title: 'History',
-      url: '/account/history',
-    },
+    // {
+    //   image: 'assets/account/history.png',
+    //   title: 'History',
+    //   url: '/account/history',
+    // },
 
     {
       image: 'assets/account/logout.png',
