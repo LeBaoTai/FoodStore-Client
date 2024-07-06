@@ -20,11 +20,11 @@ jobs:
 
       - name: Build Angular app to prod
         working-directory: .
-        run: npm install && npm run build
+        run: npm install && npm run build --prod --output-path=dist
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ./dist/browser
+          folder: dist
           branch: prod  
           token: ${{ secrets.FOOD_STORE_TOKEN }}
