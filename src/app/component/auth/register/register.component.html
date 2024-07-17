@@ -2,7 +2,7 @@
   <div class="body">
     <div class="exit flex"><button (click)="turnOffRegistuer()">x</button></div>
     <div class="title mb-15">
-      @if (isRegister) {{{title[1]}}} @else {{{title[0]}}}
+      {{ isRegister ? title[1] : title[0]}}
     </div>
     <form
       action=""
@@ -35,10 +35,10 @@
         placeholder="Repeat Password"
       />
       <button type="button" class="main-button">
-        @if (isRegister) {{{title[1]}}} @else {{{title[0]}}}
+        {{ isRegister ? title[1] : title[0] }}
       </button>
       <button type="button" class="swap" (click)="swapRegisterOrSignin()">
-        Go to @if (!isRegister) {{{title[1]}}} @else {{{title[0]}}}
+        Go to {{ !isRegister ? title[1] : title[0] }}
       </button>
     </form>
 
@@ -52,10 +52,10 @@
       <input type="text" name="username" id="username" placeholder="Username" />
       <input type="text" name="password" id="password" placeholder="Password" />
       <button type="button" class="main-button">
-        @if (!isRegister) {{{title[0]}}} @else {{{title[1]}}}
+        {{ !isRegister ? title[0] : title[1] }}
       </button>
       <button type="button" class="swap" (click)="swapRegisterOrSignin()">
-        Go to @if (isRegister) {{{title[0]}}} @else {{{title[1]}}}
+        Go to {{ isRegister ? title[0] : title[1] }}
       </button>
     </form>
   </div>

@@ -12,7 +12,7 @@ import { AuthService } from '../../../service/auth.service';
 export class RegisterComponent {
   isShow!: boolean;
   isRegister!: boolean;
-  title: string[] = ["Signin", "Register"]
+  title: string[] = ['Signin', 'Register'];
 
   constructor(private authService: AuthService) {
     this.isRegister = false;
