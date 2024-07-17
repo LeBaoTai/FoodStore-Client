@@ -1,9 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { SideBarComponent } from '../component/side-bar/side-bar.component';
 import { ProductComponent } from '../component/product/product.component';
+import { SideBarComponent } from '../component/side-bar/side-bar.component';
 import { Product, Tile } from '../types';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
