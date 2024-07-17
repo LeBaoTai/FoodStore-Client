@@ -1,0 +1,62 @@
+<div class="wrapper flex full-center" *ngIf="isShow">
+  <div class="body">
+    <div class="exit flex"><button (click)="turnOffRegistuer()">x</button></div>
+    <div class="title mb-15">
+      {{ isRegister ? title[1] : title[0]}}
+    </div>
+    <form
+      action=""
+      method="post"
+      onsubmit="return validateForm()"
+      class="column full-center gap-1"
+      *ngIf="isRegister"
+    >
+      <input
+        type="text"
+        name="firstname"
+        id="firstname"
+        placeholder="Firstname"
+      />
+      <input type="text" name="lastname" id="lastname" placeholder="Lastname" />
+      <input type="email" name="email" id="email" placeholder="Email" />
+      <input
+        type="tel"
+        name="phone"
+        id="phone"
+        maxlength="10"
+        placeholder="Phone number"
+      />
+      <input type="text" name="username" id="username" placeholder="Username" />
+      <input type="text" name="password" id="password" placeholder="Password" />
+      <input
+        type="text"
+        name="repassword"
+        id="repassword"
+        placeholder="Repeat Password"
+      />
+      <button type="button" class="main-button">
+        {{ isRegister ? title[1] : title[0] }}
+      </button>
+      <button type="button" class="swap" (click)="swapRegisterOrSignin()">
+        Go to {{ !isRegister ? title[1] : title[0] }}
+      </button>
+    </form>
+
+    <form
+      action=""
+      method="post"
+      onsubmit="return validateForm()"
+      class="column full-center gap-1"
+      *ngIf="!isRegister"
+    >
+      <input type="text" name="username" id="username" placeholder="Username" />
+      <input type="text" name="password" id="password" placeholder="Password" />
+      <button type="button" class="main-button">
+        {{ !isRegister ? title[0] : title[1] }}
+      </button>
+      <button type="button" class="swap" (click)="swapRegisterOrSignin()">
+        Go to {{ isRegister ? title[0] : title[1] }}
+      </button>
+    </form>
+  </div>
+</div>
