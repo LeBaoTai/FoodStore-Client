@@ -1,0 +1,32 @@
+<div class="wrapper flex full-center">
+  <div class="body">
+    <div class="exit flex"><button (click)="turnOffRegistuer()">x</button></div>
+    <div class="title mb-15">Register</div>
+    <form
+      action=""
+      method="post"
+      onsubmit="return validateForm()"
+      class="column full-center gap-1"
+    >
+      <input
+        type="text"
+        name="firstname"
+        id="firstname"
+        placeholder="Firstname"
+      />
+      <input type="text" name="lastname" id="lastname" placeholder="Lastname" />
+      <input type="email" name="email" id="email" placeholder="Email" />
+      <input
+        type="tel"
+        name="phone"
+        id="phone"
+        maxlength="10"
+        placeholder="Phone number"
+      />
+      <input type="text" name="username" id="username" placeholder="Username" />
+      <input type="text" name="password" id="password" placeholder="Password" />
+      <button type="button" class="res">Register</button>
+      <button type="button" class="login">Login</button>
+    </form>
+  </div>
+</div>
