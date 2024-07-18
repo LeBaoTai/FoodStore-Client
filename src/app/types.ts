@@ -10,3 +10,14 @@ export interface Product {
   price: number;
   type: string;
 }
+
+export interface User {
+  username: string;
+  password: string;
+  firstname: string;
+  lastname: string;
+  dob: string;
+  role: string[];
+  cart?: string[]
+  order?: string[];
+}
