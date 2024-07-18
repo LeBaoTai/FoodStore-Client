@@ -47,7 +47,7 @@
   <!-- account -->
   <div
     #turnOn
-    class="hover-popup turn-on"
+    class="hover-popup"
     (mouseenter)="showInfoPopup(turnOn)"
     (click)="showRegiter()"
   >
@@ -80,7 +80,7 @@
       <a routerLink="account/my-products">
         <div class="title">My Products</div>
       </a>
-      <a routerLink="">
+      <a routerLink="" (click)="logout()">
         <div class="title"><p>Logout</p></div>
       </a>
     </div>

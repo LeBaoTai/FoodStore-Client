@@ -1,14 +1,14 @@
 <div class="wrapper flex full-center" *ngIf="isShow">
   <div class="body">
-    <div class="exit flex"><button (click)="turnOffRegistuer()">x</button></div>
+    <div class="exit flex"><button (click)="turnOffRegister()">x</button></div>
     <div class="title mb-15">
-      {{ isRegister ? title[1] : title[0]}}
+      {{ isRegister ? title[1] : title[0] }}
     </div>
     <form
       action=""
       method="post"
-      onsubmit="return validateForm()"
       class="column full-center gap-1"
+      (ngSubmit)="registerUser()"
       *ngIf="isRegister"
     >
       <input
@@ -16,25 +16,52 @@
         name="firstname"
         id="firstname"
         placeholder="Firstname"
+        [(ngModel)]="registerModel.firstname"
       />
-      <input type="text" name="lastname" id="lastname" placeholder="Lastname" />
-      <input type="email" name="email" id="email" placeholder="Email" />
+      <input
+        type="text"
+        name="lastname"
+        id="lastname"
+        placeholder="Lastname"
+        [(ngModel)]="registerModel.lastname"
+      />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Email"
+        [(ngModel)]="registerModel.email"
+      />
       <input
         type="tel"
         name="phone"
         id="phone"
         maxlength="10"
         placeholder="Phone number"
+        [(ngModel)]="registerModel.phone"
       />
-      <input type="text" name="username" id="username" placeholder="Username" />
-      <input type="text" name="password" id="password" placeholder="Password" />
       <input
         type="text"
+        name="username"
+        id="username"
+        placeholder="Username"
+        [(ngModel)]="registerModel.username"
+      />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+        [(ngModel)]="registerModel.password"
+      />
+      <input
+        type="password"
         name="repassword"
         id="repassword"
         placeholder="Repeat Password"
+        [(ngModel)]="registerModel.rePassword"
       />
-      <button type="button" class="main-button">
+      <button type="submit" class="main-button">
         {{ isRegister ? title[1] : title[0] }}
       </button>
       <button type="button" class="swap" (click)="swapRegisterOrSignin()">
@@ -45,13 +72,25 @@
     <form
       action=""
       method="post"
-      onsubmit="return validateForm()"
       class="column full-center gap-1"
+      (ngSubmit)="loginUser()"
       *ngIf="!isRegister"
     >
-      <input type="text" name="username" id="username" placeholder="Username" />
-      <input type="text" name="password" id="password" placeholder="Password" />
-      <button type="button" class="main-button">
+      <input
+        type="text"
+        name="username"
+        id="username"
+        placeholder="Username"
+        [(ngModel)]="credentials.username"
+      />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+        [(ngModel)]="credentials.password"
+      />
+      <button type="submit" class="main-button">
         {{ !isRegister ? title[0] : title[1] }}
       </button>
       <button type="button" class="swap" (click)="swapRegisterOrSignin()">

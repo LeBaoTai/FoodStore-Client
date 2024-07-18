@@ -21,8 +21,9 @@ export class HeaderComponent {
   }
 
   showInfoPopup(element: HTMLDivElement) {
-    if (!this.isUserSignedIn) {
-      this.render.removeClass(element, 'turn-on');
+    console.log(this.isUserSignedIn);
+    if (this.isUserSignedIn) {
+      this.render.addClass(element, 'turn-on');
     }
   }
 
@@ -30,5 +31,9 @@ export class HeaderComponent {
     if (!this.isUserSignedIn) {
       this.authService.setShowRegister(true);
     }
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }
