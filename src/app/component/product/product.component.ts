@@ -1,10 +1,11 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Product } from '../../types';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'
 })

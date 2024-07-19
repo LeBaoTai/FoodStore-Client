@@ -1,11 +1,17 @@
 <div class="wrapper">
   <div class="picture">
-    <img src="{{ product.image }}" alt="Product image" />
+    <img
+      ngSrc="{{ product.image }}"
+      alt="Product image"
+      width="150"
+      height="100"
+      priority
+    />
   </div>
   <div class="name">
     <p>{{ product.name }}</p>
   </div>
   <div class="price">
-    <p>{{ product.price }}</p>
+    <p>${{ product.price }}</p>
   </div>
 </div>

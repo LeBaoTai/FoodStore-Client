@@ -5,10 +5,12 @@ export interface Tile {
 }
 
 export interface Product {
-  image: string;
+  id: string;
   name: string;
   price: number;
-  type: string;
+  type?: string;
+  status: boolean;
+  image?: string;
 }
 
 export interface User {

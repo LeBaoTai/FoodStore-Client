@@ -4,6 +4,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { ProductComponent } from '../component/product/product.component';
 import { SideBarComponent } from '../component/side-bar/side-bar.component';
 import { Product, Tile } from '../types';
+import { ProductService } from '../service/product.service';
 
 @Component({
   selector: 'app-home',
@@ -32,68 +33,38 @@ export class HomeComponent {
       url: '/vegetables',
     },
     {
-      image: 'assets/category/beef.png',
-      title: 'Beef',
-      url: '/beef',
+      image: 'assets/category/meat.png',
+      title: 'Meat',
+      url: '/meat',
     },
     {
-      image: 'assets/category/chicken.png',
-      title: 'Chicken',
-      url: '/chicken',
+      image: 'assets/category/seafood.png',
+      title: 'Seafoot',
+      url: '/seafoot',
     },
     {
-      image: 'assets/category/crab.png',
-      title: 'Crab',
-      url: '/crab',
+      image: 'assets/category/dairy.png',
+      title: 'Dairy',
+      url: '/dairy',
     },
     {
-      image: 'assets/category/fish.png',
-      title: 'Fish',
-      url: '/fish',
-    },
-    {
-      image: 'assets/category/pork.png',
-      title: 'Pork',
-      url: '/pork',
+      image: 'assets/category/fruits.png',
+      title: 'Fruits',
+      url: '/fruit',
     },
   ];
 
-  products: Product[] = [
-    {
-      name: 'Chicken',
-      price: 12.31,
-      image: 'assets/product/salad.jpg',
-      type: '',
-    },
-    {
-      name: 'Chicken',
-      price: 12.31,
-      image: 'assets/product/salad.jpg',
-      type: '',
-    },
-    {
-      name: 'Chicken',
-      price: 12.31,
-      image: 'assets/product/salad.jpg',
-      type: '',
-    },
-    {
-      name: 'Chicken',
-      price: 12.31,
-      image: 'assets/product/salad.jpg',
-      type: '',
-    },
-    {
-      name: 'Chicken',
-      price: 12.31,
-      image: 'assets/product/salad.jpg',
-      type: '',
-    },
-    {
-      name: 'Chicken',
-      price: 12.31,
-      image: 'assets/product/salad.jpg',
-      type: '',
-    },
-  ];
+
+  products: Product[] = [];
+
+  constructor(private productService: ProductService) {
+    this.productService.getAllProducts().subscribe({
+      next: (products) => {
+        this.products = products as Product[];
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
+  }
 }
