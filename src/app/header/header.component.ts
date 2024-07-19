@@ -24,6 +24,8 @@ export class HeaderComponent {
     console.log(this.isUserSignedIn);
     if (this.isUserSignedIn) {
       this.render.addClass(element, 'turn-on');
+    } else {
+      this.render.removeClass(element, 'turn-on');
     }
   }
 
@@ -35,5 +37,6 @@ export class HeaderComponent {
 
   logout() {
     this.authService.logout();
+    console.log('logout');
   }
 }
