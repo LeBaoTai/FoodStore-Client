@@ -8,7 +8,11 @@ import { MyProductsComponent } from './component/account/my-products/my-products
 import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent, title: 'Food Store' },
+  {
+    path: '',
+    loadChildren: () =>
+      import('./module/home/home.module').then((m) => m.HomeModule),
+  },
   { path: 'cart', component: CartComponent, title: 'Cart' },
 
   // account path
