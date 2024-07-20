@@ -2,9 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { ProductComponent } from '../component/product/product.component';
-import { SideBarComponent } from '../component/side-bar/side-bar.component';
-import { Product, Tile } from '../types';
+import { HomeSideBarComponent } from '../component/side-bar/home-side-bar/home-side-bar.component';
 import { ProductService } from '../service/product.service';
+import { Product, Tile } from '../types';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +12,7 @@ import { ProductService } from '../service/product.service';
   imports: [
     RouterLink,
     RouterOutlet,
-    SideBarComponent,
+    HomeSideBarComponent,
     ProductComponent,
     CommonModule,
   ],
@@ -39,8 +39,8 @@ export class HomeComponent {
     },
     {
       image: 'assets/category/seafood.png',
-      title: 'Seafoot',
-      url: '/seafoot',
+      title: 'Seafood',
+      url: '/seafood',
     },
     {
       image: 'assets/category/dairy.png',
@@ -54,11 +54,32 @@ export class HomeComponent {
     },
   ];
 
-
   products: Product[] = [];
 
   constructor(private productService: ProductService) {
     this.productService.getAllProducts().subscribe({
+      next: (products) => {
+        this.products = products as Product[];
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
+  }
+
+  getAll() {
+    this.productService.getAllProducts().subscribe({
+      next: (products) => {
+        this.products = products as Product[];
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
+  }
+
+  getAllByType(type: string) {
+    this.productService.getAllProductsByType(type).subscribe({
       next: (products) => {
         this.products = products as Product[];
       },

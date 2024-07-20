@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
-import { SideBarComponent } from '../component/side-bar/side-bar.component';
 import { CommonModule } from '@angular/common';
-import { Tile } from '../types';
+import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { AccountSideBarComponent } from '../component/side-bar/account-side-bar/account-side-bar.component';
+import { Tile } from '../types';
 
 @Component({
   selector: 'app-account',
   standalone: true,
-  imports: [SideBarComponent, CommonModule, RouterOutlet, RouterLink],
+  imports: [AccountSideBarComponent, CommonModule, RouterOutlet, RouterLink],
   templateUrl: './account.component.html',
   styleUrl: './account.component.scss',
 })

@@ -1,0 +1,6 @@
+<div class="wrapper">
+  <div class="title mb-15">{{ title }}</div>
+  <div class="body" *ngFor="let tile of tiles">
+    <app-account-tile [tile]="tile"></app-account-tile>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-<a [routerLink]="tile.url">
+<a (click)="getProduts(tile.title)">
   <img src="{{ tile.image }}" alt="" />
   <div class="tile">{{ tile.title }}</div>
 </a>
