@@ -1,0 +1,39 @@
+.wrapper {
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+  border-radius: 5px;
+  font-family: "Inter", sans-serif;
+
+  .title {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .body {
+    img {
+      height: 20px;
+    }
+    a {
+      border-radius: 10px;
+      padding: 5px;
+      height: 35px;
+      border: 10px;
+      text-decoration: none;
+      color: black;
+
+      display: flex;
+      align-items: center;
+
+      transition: all 0.1s ease 0s;
+
+      .tile {
+        margin-left: 5px;
+      }
+    }
+    a:hover {
+      background-color: rgb(240,240,240);
+    }
+  }
+}
+
