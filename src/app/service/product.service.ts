@@ -16,4 +16,11 @@ export class ProductService {
       .get<any>(`${this.url}/products/all`, { headers })
       .pipe(map(res => res.result));
   }
+
+  getAllProductsByType(type: string): Observable<any>{
+    const headers = new HttpHeaders({ 'Content-Type': 'Application/json' });
+    return this.http
+      .get<any>(`${this.url}/products/all/type/${type}`, { headers })
+      .pipe(map(res => res.result));
+  }
 }
